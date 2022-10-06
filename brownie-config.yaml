@@ -1,0 +1,23 @@
+
+
+dotenv: .env
+
+wallets:
+  from_key: ${PRIVATE_KEY}
+
+networks:
+  development:
+    verify: False
+
+  ganache-local:
+    verify: False
+
+  goerli:
+    verify: True
+
+  sepolia:
+    verify: True
+
+  # rinkeby: in process of deprecation
+  # kovan: deprecated
+  # ropsten: deprecated
