@@ -1,5 +1,5 @@
 from brownie import XQuantumMarket, config, network
-from scripts.helpful_Scripts import get_account
+from scripts.helpful_Scripts import get_account, LOCAL_ETHEREUM_DEVELOPMENT
 
 def deployer():
     account = get_account()
@@ -7,7 +7,8 @@ def deployer():
         {'from':account}, 
         publish_source = config['networks'][network.show_active()].get('verify', False)
         )
-    print(f'smartContract deployed at https://goerli.etherscan.io/address/{xquantumMarket}')
+    if (network.show_active() == LOCAL_ETHEREUM_DEVELOPMENT):
+        print(f'smartContract deployed at https://goerli.etherscan.io/address/{xquantumMarket}')
     return xquantumMarket
 
 def getInfo():
@@ -42,7 +43,7 @@ def withdraw():
 def main():
     """ here below you can comment/uncomment different functions
     depending over how you want to interact with the smartContract. """
-    # deployer()
+    deployer()
     # getInfo()
     # setPrice('T-shirt', 5000000)
     # buyProduct(5000000 * 1/10**9, 'T-shirt')
