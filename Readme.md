@@ -11,7 +11,7 @@ Smart Contract address
 
 > # Testing
 
-Here I have built two test levels [unit tests](https://pip.pypa.io/en/stable/), [integration tests](https://pip.pypa.io/en/stable/) to test the smartContract on **local development network** as well as **on out chain**.
+Here I have built two test levels [unit tests](https://github.com/Abhigyan-Sh/XQuantumMarket/blob/main/tests/test_unit.py), [integration tests](https://github.com/Abhigyan-Sh/XQuantumMarket/blob/main/tests/test_integration.py) to test the smartContract on **local development network** as well as **on out chain**.
 
 ### What all needs to be tested:
 
